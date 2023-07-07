@@ -1,0 +1,55 @@
+* {margin:0; padding:0;}
+ul,li {list-style:none;}
+a {text-decoration:none;}
+img {vertical-align:top;}
+table {border-collapse:collapse;}
+.clear_fix:after {content:""; display:block; clear:both;}
+body {font-family: 'Open Sans'; font-weight:400; line-height:1;}
+
+
+h3 {position:relative; margin-top:100px; color:#efefef; font-size:100px; }
+h3:before {content:attr(data-text); position:absolute; left:0; top:0; color:saddlebrown; width:0; white-space:nowrap; overflow:hidden; transition:all 1s;}
+h3:hover:before {width:100%;}
+.top {position:relative; padding-bottom:30px;}
+.top:before {position:absolute; content:""; bottom:0; left:0; width:100%; height:2px; background-color:#efefef;}
+.top:after {position:absolute; content:""; bottom:0; left:0; width:0; height:2px; background-color:saddlebrown; transition:all 1s;}
+.top:hover:after {width:100%;}
+
+
+.txt {position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:83px; font-size:16px; font-weight:600; color:#fff;}
+.txt:before {content:attr(data-text); position:absolute; left:0; top:0; width:0; white-space:nowrap; overflow:hidden; color:#0a2322; transition:all 1s;}
+.txt:hover:before {width:100%;}
+
+.circle_group {position:relative; width:360px; height:360px; left:100px; top:100px;}
+.c1 {text-align:center; line-height:360px; border-radius:50%; border:1px solid #000;}
+.c2, .c3 {position:absolute; left:0; top:0; width:100%; height:100%; border:2px solid red; border-radius:50%; opacity:1; animation-name:anitest; animation-duration:2s; animation-iteration-count:infinite;}
+
+.c3 {animation-delay:0.3s;}
+
+.c4 {position:absolute; left:0; top:0; 
+
+/*애니메이션 -> 이름 초수 속도 딜레이초수 반복횟수*/
+animation:anirotate 20s linear 0s infinite;
+}
+
+@keyframes anitest {
+
+    0% {opacity:1; transform:scale(1.1);}
+
+    100% {opacity:0;}
+
+}
+
+@keyframes anirotate {
+
+    0% {transform:rotate(0deg);}
+
+    100% {transform:rotate(180deg);}
+
+}
+
+/*스크립트에서 circle_group 마우스 올렸을때 addClass(클래스 명)*/
+
+/*animation 속성*/
+
+
